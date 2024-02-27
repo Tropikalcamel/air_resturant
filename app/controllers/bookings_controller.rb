@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_restaurant, only: %i[ new create status  ]
+  before_action :set_restaurant, only: %i[ new create]
 
   def new
     @booking = Booking.new
@@ -13,8 +13,7 @@ def create
     redirect_to root_path
     # needs to go confiramtion page
   else
-    @bookings = @user.bookings
-    render "booking/new", status: :unprocessable_entity
+    render "bookings/new", status: :unprocessable_entity
   end
 end
 
@@ -22,9 +21,10 @@ end
 private
 
 def booking_params
-  params.require(:booking).permit(:booking_date, :booking_time)
-  end
-def set_restaurant
-  @restaurant = Restaurant.find(params[:restaurant_id])
+  params.require(:booking).permit(:party_size, :booking_date, :booking_time)
 end
+
+  def set_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
 end
