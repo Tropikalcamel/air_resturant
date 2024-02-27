@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_111205) do
     t.string "phone_number"
     t.text "description"
     t.boolean "vegetarian"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false

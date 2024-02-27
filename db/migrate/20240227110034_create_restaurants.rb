@@ -6,6 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration[7.1]
       t.string :phone_number
       t.text :description
       t.boolean :vegetarian
+      t.string :image
 
       t.timestamps
     end

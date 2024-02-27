@@ -5,7 +5,7 @@ class CreateBookings < ActiveRecord::Migration[7.1]
       t.references :restaurant, null: false, foreign_key: true
       t.date :booking_date
       t.time :booking_time
-      t.string :status
+      t.boolean :status
 
       t.timestamps
     end
