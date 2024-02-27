@@ -17,6 +17,8 @@ def create
   end
 end
 
+
+
 def destroy
     @booking = Resturant.find(params[:id])
     @booking.destroy
@@ -33,4 +35,3 @@ end
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 end
-
