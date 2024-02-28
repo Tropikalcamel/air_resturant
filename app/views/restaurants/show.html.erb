@@ -1,0 +1,11 @@
+
+<div class="card" style="width: 18rem;">
+  <%= image_tag @restaurant.image, class: "card-img-top", style: "width: 300px;" %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.name %></h5>
+    <p class="card-text">Phone number: <%= @restaurant.phone_number %></p>
+    <p class="card-text">Vegetarian: <%= @restaurant.vegetarian %></p>
+    <p class="card-text">Description: <%= @restaurant.description %></p>
+  </div>
+</div>
+
