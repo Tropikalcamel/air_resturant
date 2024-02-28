@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       patch 'cancel'
     end
   end
+  get 'profile', to: 'pages#profile', as: "profile"
 
   root to: "pages#home"
   resources :restaurants do

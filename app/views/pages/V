@@ -1,4 +1,0 @@
-- create custom routes for profile
-- create profile method in pages controller
-- create view for profile.html.erb inside pages views folder
-- current_user.bookings
