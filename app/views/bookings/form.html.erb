@@ -1,10 +1,12 @@
-<%= simple_form_for [@restaurant , @booking] do |f| %>
+
+<%= simple_form_for(@booking) do |f| %>
   <%= f.error_notification %>
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :booking_date %>
-    <%= f.input :booking_time %>
+    <%= f.input :name %>
+    <%= f.input :date %>
+    <%= f.input :time %>
     <%= f.input :party_size %>
   </div>
 
