@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_restaurant, only: %i[ new create destroy]
+  before_action :set_restaurant, only: %i[ new create ]
 
   def new
     @booking = Booking.new
@@ -15,7 +15,7 @@ def create
   else
     render "bookings/new", status: :unprocessable_entity
   end
-
+end
 # def destroy
 #     # @booking = Resturant.find(params[:id])
 #     @booking.destroy
@@ -31,5 +31,4 @@ end
   def set_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
-end
 end
