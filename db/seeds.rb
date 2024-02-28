@@ -14,7 +14,6 @@ require 'faker'
 
 # # Get all user IDs
 # user_ids = User.pluck(:id)
-
 # # Create 20 users
 # 20.times do
 #   user = User.create(
@@ -40,6 +39,7 @@ require 'faker'
 
 
 # Load Faker gem for generating random data
+
 
 # Create 20 restaurants with image URLs
 
@@ -72,6 +72,8 @@ image_urls = [
 
 # Create 20 restaurants with different image URLs
 25.times do |i|
+
+  
   Restaurant.create!(
     name: Faker::Restaurant.name,
     address: Faker::Address.full_address,
@@ -79,6 +81,7 @@ image_urls = [
     description: Faker::Lorem.paragraph,
     vegetarian: Faker::Boolean.boolean,
     user_id: User.pluck(:id).sample,
+
     image: image_urls[i % image_urls.length] # Use different image URL for each restaurant
   )
 end
@@ -94,3 +97,4 @@ end
 #     image: image_urls[i % image_urls.length] # Use different image URL for each restaurant
 #   )
 # end
+

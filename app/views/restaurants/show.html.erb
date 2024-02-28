@@ -1,4 +1,5 @@
 
+
 <div class="imageHeader">
   <%= image_tag @restaurant.image, class: "card-img-top" %>
 </div>
@@ -24,3 +25,5 @@
 
 
 </div>
+
+<%= link_to "booking", new_restaurant_booking_path(@restaurant), class: "btn btn-primary" %>
