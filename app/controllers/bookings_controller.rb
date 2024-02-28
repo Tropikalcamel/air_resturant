@@ -15,9 +15,6 @@ def create
   else
     render "bookings/new", status: :unprocessable_entity
   end
-end
-
-
 
 def destroy
     @booking = Resturant.find(params[:id])
@@ -34,4 +31,5 @@ end
   def set_restaurant
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
+end
 end
