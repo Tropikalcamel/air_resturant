@@ -16,11 +16,11 @@ def create
     render "bookings/new", status: :unprocessable_entity
   end
 
-def destroy
-    @booking = Resturant.find(params[:id])
-    @booking.destroy
-    redirect_to root_path(@restaurant.booking), status: :see_other
-  end
+# def destroy
+#     # @booking = Resturant.find(params[:id])
+#     @booking.destroy
+#     redirect_to root_path(@restaurant.booking), status: :see_other
+#   end
 
 private
 
