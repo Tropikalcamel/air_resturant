@@ -1,12 +1,14 @@
 # config/routes.rb
 Rails.application.routes.draw do
+  devise_for :users
   resources :bookings do
     member do
       patch 'cancel'
     end
   end
-  devise_for :users
-  root to: "restaurants#index"
+  get 'profile', to: 'pages#profile', as: "profile"
+
+  root to: "pages#home"
   resources :restaurants do
     resources :bookings
   end

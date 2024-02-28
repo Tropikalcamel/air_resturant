@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_restaurant, only: %i[ new create]
+  before_action :set_restaurant, only: %i[ new create ]
 
   def new
     @booking = Booking.new
@@ -17,6 +17,11 @@ def create
   end
 end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to profile_path, status: :see_other
+  end
 
 private
 
