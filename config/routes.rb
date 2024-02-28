@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     end
   end
   devise_for :users
-  root to: "restaurants#index"
+  root to: "pages#home"
   resources :restaurants do
     resources :bookings
   end
