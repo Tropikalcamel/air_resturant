@@ -15,35 +15,6 @@
   <body>
 
     <%= render "shared/navbar" %>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <!-- Logo -->
-        <a class="navbar-brand" href="#">
-
-        <%= image_tag "logo.svg", style: "width: 48px;", alt: "Logo" %>
-          <%# <img src="restaurant.svg" alt="Logo" height="30"> %>
-        </a>
-
-        <!-- Button to trigger login modal -->
-        <button class="navbar-toggler" type="button" data-toggle="modal" data-target="#loginModal">
-          Login
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto">
-            <!-- Add your navigation links here -->
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">Booking</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Login</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
