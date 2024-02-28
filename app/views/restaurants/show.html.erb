@@ -1,12 +1,29 @@
 
-<div class="card" style="width: 18rem;">
-  <%= image_tag @restaurant.image, class: "card-img-top", style: "width: 300px;" %>
-  <div class="card-body">
-    <h5 class="card-title"><%= @restaurant.name %></h5>
-    <p class="card-text">Phone number: <%= @restaurant.phone_number %></p>
-    <p class="card-text">Vegetarian: <%= @restaurant.vegetarian %></p>
-    <p class="card-text">Description: <%= @restaurant.description %></p>
+
+<div class="imageHeader">
+  <%= image_tag @restaurant.image, class: "card-img-top" %>
+</div>
+
+<div class=" flex-wrap">
+<div class="rightCol">
+ <div class="card-body">
+    <h3 class="card-title"><strong><%= @restaurant.name %></strong></h3>
+    <p class="card-text">Phone number: <strong><%= @restaurant.phone_number  %></strong></p>
+    <p class="card-text">Vegetarian: <strong><%= @restaurant.vegetarian %></strong></p>
+    <p class="card-text">Description: <strong><%= @restaurant.description %></strong></p>
   </div>
+</div>
+<div class="booking">
+
+<form action=""></form>
+
+</div>
+
+</div>
+
+<div class="" style="width: 18rem;">
+
+
 </div>
 
 <%= link_to "booking", new_restaurant_booking_path(@restaurant), class: "btn btn-primary" %>

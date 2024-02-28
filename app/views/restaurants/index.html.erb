@@ -2,8 +2,15 @@
 <div class="flex-wrap">
   <% @restaurants.each do |restaurant| %>
     <div class="card-r mx-2 mb-4 zoom-effect">
-    <%= link_to restaurant_path(restaurant), class: "btn" do %>
+
+    <%= link_to restaurant_path(restaurant), class: "btn restaurant-img-link" do %>
+
+
+      <%= image_tag restaurant.image, class: "card-img-top restaurant-img mb-3" %>
+
+  
     
+
       <div class="px-3 ">
         <h5 class="card-title font-weight-bold"><%= restaurant.name %></h5>
 
