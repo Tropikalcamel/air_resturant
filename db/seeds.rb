@@ -87,6 +87,7 @@ data['results'].each do |result|
   image_url = result['photos'][0]['links'][1]
   cuisine = result['cuisine']
   description = Faker::Restaurant.description
+  dietaryRestrictions = result['dietaryRestrictions']
   # Create a new restaurant record
   restaurant = Restaurant.new(
     name: name,
@@ -96,7 +97,8 @@ data['results'].each do |result|
     ratings: ratings,
     user_ratings_total: user_ratings_total,
     image: image_url,
-    category: cuisine
+    category: cuisine,
+    dietaryRestrictions: dietaryRestrictions,
   )
 
   # Find or create a user record (assuming you have a User model)

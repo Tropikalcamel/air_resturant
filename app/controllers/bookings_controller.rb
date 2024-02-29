@@ -2,6 +2,9 @@ class BookingsController < ApplicationController
 
   before_action :set_restaurant, only: %i[ new create]
 
+  def show
+    @booking = Booking.all
+  end
 
   def new
     @booking = Booking.new
@@ -17,8 +20,22 @@ def create
   else
     render "bookings/new", status: :unprocessable_entity
   end
-end
+  end
 
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+  @booking = Booking.find(params[:id])
+  if @booking.update(booking_params)
+    # Handle successful update
+    redirect_to profile_path, notice: 'Booking was successfully updated.'
+  else
+    # Handle validation errors or other errors
+    render :edit
+  end
+  end
 
   def destroy
     @booking = Booking.find(params[:id])
