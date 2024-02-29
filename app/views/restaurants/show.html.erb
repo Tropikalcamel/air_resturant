@@ -6,6 +6,129 @@
 
 <div class=" flex-wrap">
 <div class="rightCol">
+
+
+
+
+
+<%# restaurant info %>
+
+<div id="listOfRestautants">
+
+      <!-- START of Go back Button -->
+
+      <!-- END of Go back Button -->
+
+      <!-- START Image Slider -->
+
+      <!-- END Image Slider -->
+
+
+      <!-- start Restaurant Title -->
+      <div class="restaurantTitle">
+          <h2><%= @restaurant.name %></h2>
+      </div>
+      <!-- END Restaurant Title -->
+
+      <!-- start Restaurant Rating - Price - OpenNow-->
+      <div class="restaurant-Rate-Price-OpenNow">
+
+          <div class=" restaurant-rating-scoreVar ">
+
+
+              <div class="restaurant-rating-scoreVar restaurant-rating" style="background-image: url(<%= asset_path('ratingbackground.svg') %>) ">
+                 <img class="Popular-rating-score rating-score" src="<%= asset_path('ratingscore.svg') %>" width="<%= (@restaurant.ratings * 100) / 5 %>%"   alt=" ">
+              </div>
+
+
+              <div class=" rateScorVar "><%= @restaurant.ratings %></div>
+          </div>
+
+
+          <div class="divider"></div>
+          <div class="restaurant-Price">€€€</div>
+          <div class="divider"></div>
+          <div class=" restaurant-OpenNow ">
+              <p>Open now</p>
+              <img src="<%= asset_path('Open-now-Icon.svg') %>" alt=" ">
+          </div>
+      </div>
+      <!-- END Restaurant Rating - Price - OpenNow-->
+
+
+      <!-- start Restaurant Cuisine / DietaryRestriction / Delivery -->
+      <div class="restaurant-Cuisine-DietaryRestriction-Delivery">
+          <div class="restaurant-Cuisine CuisineContainer">
+              <div class="CuisineImg">
+                <img src="<%= asset_path("#{@restaurant.category}.svg") %>" alt="">
+              </div>
+              <div class="CuisineTitle">
+                  <p><%= @restaurant.category %></p>
+
+              </div>
+          </div>
+          <div class="categoryDivider"></div>
+          <div class="restaurant-DietaryRestriction CuisineContainer">
+              <div class="CuisineImg">
+                  <img src="<%= asset_path("Kosher.svg") %>" alt="">
+              </div>
+              <div class="CuisineTitle">
+                  <p><%= @restaurant.dietaryRestrictions %></p>
+              </div>
+          </div>
+          <div class="categoryDivider"></div>
+          <div class="restaurant-Delivery CuisineContainer">
+              <div class="CuisineImg">
+                  <img src="<%= asset_path("pickup.svg") %>" alt="">
+              </div>
+              <div class="CuisineTitle">
+                  <p>pickup</p>
+              </div>
+          </div>
+
+      </div>
+      <!-- END Restaurant Cuisine / DietaryRestriction / Delivery -->
+
+
+      <!-- start Restaurant Description -->
+      <div class="restaurantDescription">
+          <p><%= @restaurant.description %></p>
+      </div>
+      <!-- End Restaurant Description -->
+
+      <!-- start Restaurant Address -->
+      <div class="restaurant-Address">
+          <img class="Img-Icon" src="<%= asset_path("adressIcon.svg") %>" alt=" ">
+          <div class="textInfo"><%= @restaurant.address %></div>
+      </div>
+      <!-- END Restaurant Address -->
+
+      <!-- start Restaurant Phone Number -->
+      <div class=" restaurant-tel ">
+          <img class="Img-Icon" src="<%= asset_path("phoneIcon.svg") %>"alt=" ">
+
+          <div class="textInfo"><%= @restaurant.phone_number %></div>
+      </div>
+      <!-- END Restaurant Phone Number -->
+
+      <!-- start Restaurant OpningTime -->
+      <div class="restaurant-OpningTime">
+          <img class="Img-Icon" src="<%= asset_path("Open-now-Icon.svg") %>"alt=" ">
+          <div class="textInfo">
+              From 9:00 to 23:00
+              <%= @restaurant.opening_hours %>
+          </div>
+
+      </div>
+      <!-- END Restaurant OpningTime -->
+
+  </div>
+
+
+
+
+
+
  <div class="card-body">
     <h3 class="card-title"><strong><%= @restaurant.name %></strong></h3>
     <h2 class="card-title"><strong><%= @restaurant.address %></strong></h2>

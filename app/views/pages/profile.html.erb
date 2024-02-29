@@ -7,16 +7,96 @@
   </div>
 </div>
 
+<%# booking Card %>
+
+
+
+
+
 <div class="container">
   <div class="row mt-5">
     <% @user.bookings.each do |booking| %>
+
+
+
+
+<div class="Popular-restaurant-info">
+  <div class="Popular-restaurant-img">
+        <a href="#"><img class=" Popular-restaurant-img-link " src="<%= booking.restaurant.image %>" alt=" "></a>
+    </div>
+    <div class=" Popular-restaurant-text-info ">
+        <div class="Popular-restaurant-text-Title-favoriteIcon ">
+
+            <h3 class=" Popular-restaurant-title "><a href="#"><%= booking.restaurant.name %></a>
+            </h3>
+
+        </div>
+
+        <div class=" Popular-restaurant-description ">
+            <p><%= booking.restaurant.description %>
+            </p>
+        </div>
+
+        <div class=" Popular-restaurant-rating-scoreVar ">
+            <div class="Popular-restaurant-rating-wrapper">
+            <div class="Popular-restaurant-rating" style="background-image: url(<%= asset_path('ratingbackground.svg') %>) ">
+               <img class="Popular-rating-score" src="#"   alt=" ">
+            </div>
+
+
+
+                <div class=" Popular-rateScorVar "><%= booking.restaurant.ratings %></div>
+
+
+
+
+            </div>
+            <div class=" Popular-restaurant-OpenNow ">
+                <p>Open now</p>
+                <img src="<%= asset_path('Open-now-Icon.svg') %>" alt=" ">
+            </div>
+        </div>
+
+
+
+        <div class=" Popular-restaurant-tel-cuisine-openNow ">
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="col-4">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('')">
           At:  <%= booking.restaurant.name %>
           Date: <%= booking.booking_date %>
           Time: <%= booking.booking_time %>
            <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-danger" %>
-          <%= button_to "update", booking_path(booking) , class:"btn btn-primary" %>
+            <%= button_to "Update", edit_booking_path(booking), method: :get, class: "btn btn-primary" %>
+            <%= link_to "Update", edit_booking_path(booking), class: "btn btn-primary" %>
           </div>
       </div>
     <% end %>

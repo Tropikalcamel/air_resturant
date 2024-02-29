@@ -270,7 +270,6 @@ Not supports in Firefox and IE */
 
 .rating-score {
   object-fit: none;
-  width: 91%;
   object-position: left;
   /* top: 0; */
   height: 13.12px;
@@ -344,6 +343,9 @@ Not supports in Firefox and IE */
   align-items: center;
   color: #828282;
   font-size: 14px;
+}
+.restaurant-OpenNow p{
+  margin: auto;
 }
 
 .restaurant-OpenNow img {
@@ -631,4 +633,243 @@ font-style: normal;
 .categoryText {
   margin-top: 14px;
   color: #8f6363;
+}
+
+
+
+
+
+// restaurant detail page
+
+
+
+.goBackBtn {
+  height: 28px;
+}
+
+.goBackBtn a {
+  display: flex;
+  text-decoration: none;
+}
+
+.goBackBtn img {
+  margin-right: 8px;
+}
+
+.imgSlider {
+  width: 680px;
+  height: 364px;
+  object-fit: cover;
+  border-radius: 19px;
+}
+
+.imgSliderDiv {
+
+  width: fit-content;
+
+  overflow: hidden;
+}
+
+
+
+.goBackBtn {}
+
+.imgNav {
+
+  width: 680px;
+
+  position: absolute;
+
+  height: 364px;
+
+  /* background-color: beige; */
+
+  justify-content: space-between;
+
+  display: flex;
+
+  overflow: hidden;
+
+  /* border-radius: 12px 0; */
+}
+
+.leftBtn {
+
+  width: 45px;
+
+  height: 364px;
+
+  border-radius: 19px 0 0 19px;
+
+  background-color: #00000042;
+}
+
+.RightBtn {
+
+  width: 45px;
+
+  height: 364px;
+
+  border-radius: 0 19px 19px 0;
+
+  /* background-color: #000000bf; */
+
+  background-color: #00000042;
+}
+
+.CuisineImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.CuisineTitle {
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: capitalize;
+  color: #8C8B8A;
+}
+
+.restaurantTitle {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #6D6D6D;
+}
+
+.restaurant-Rate-Price-OpenNow {
+
+  display: flex;
+
+  width: 305px;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 33px;
+}
+
+.divider {
+
+  background-color: #BDBDBD;
+
+  height: 3px;
+
+  width: 3px;
+
+  border-radius: 27px;
+}
+
+.CuisineContainer {
+
+  /* background-color: aquamarine; */
+
+  width: 77px;
+}
+
+.restaurant-rating {}
+
+.rating-score {}
+
+.restaurant-Price {
+  color: #FF7F00;
+  font-weight: bold;
+  ont-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17px;
+  line-height: 19px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  color: #FF7F00;
+}
+
+.restaurant-OpenNow {}
+
+.restaurant-Cuisine-DietaryRestriction-Delivery {
+
+  display: flex;
+
+  /* justify-content: start; */
+
+  width: 346px;
+
+  justify-content: space-between;
+}
+
+
+.restaurant-Delivery {
+
+  margin-right: 47px;
+}
+
+
+
+.restaurantDescription {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  text-transform: capitalize;
+  color: #BDBDBD;
+  width: 583px;
+  margin-bottom: 34px;
+}
+
+.restaurant-Address {
+  display: flex;
+  margin-bottom: 14px;
+}
+
+.restaurant-tel {
+  margin-bottom: 14px;
+}
+
+.restaurant-tel-Icon {}
+
+.restaurant-OpningTime {
+  display: flex;
+}
+
+
+
+.Img-Icon {
+  margin-right: 10px;
+  width: 14px;
+  text-align: center;
+}
+
+.textInfo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+
+  color: #808080;
+}
+
+.categoryDivider {
+  background-color: #0000001a;
+  height: 50px;
+  width: 1px;
 }
