@@ -66,8 +66,9 @@
 require 'json'
 require 'open-uri'
 require 'faker'
-
+Booking.destroy_all
 Restaurant.destroy_all
+
 # Load the JSON data from the file or URL
 data = JSON.parse(File.read('db/restaurant.json'))
 
