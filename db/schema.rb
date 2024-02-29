@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_28_152217) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_28_224914) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,7 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_152217) do
     t.bigint "restaurant_id", null: false
     t.date "booking_date"
     t.time "booking_time"
-    t.boolean "status"
+    t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "party_size"
@@ -33,17 +33,20 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_28_152217) do
     t.string "phone_number"
     t.text "description"
     t.boolean "vegetarian"
-    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
+    t.string "image"
+    t.json "opening_hours"
+    t.float "ratings"
+    t.integer "user_ratings_total"
+    t.text "category"
     t.index ["user_id"], name: "index_restaurants_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "name"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
