@@ -1,22 +1,92 @@
 <h1>All Restaurants</h1>
 <div class="flex-wrap">
+
+<%# restaurant card %>
+
   <% @restaurants.each do |restaurant| %>
-    <div class="card-r mx-2 mb-4 zoom-effect">
-
-    <%= link_to restaurant_path(restaurant), class: "btn restaurant-img-link" do %>
+    <div class="mx-2 mb-4 zoom-effect">
 
 
-      <%= image_tag restaurant.image, class: "card-img-top restaurant-img mb-3" %>
 
-  
-    
+<div class="Popular-restaurant-info">
+  <div class="Popular-restaurant-img">
+        <a href="<%= restaurant_path(restaurant) %>"><img class=" Popular-restaurant-img-link " src="<%= restaurant.image %>" alt=" "></a>
+    </div>
+    <div class=" Popular-restaurant-text-info ">
+        <div class="Popular-restaurant-text-Title-favoriteIcon ">
 
-      <div class="px-3 ">
-        <h5 class="card-title font-weight-bold"><%= restaurant.name %></h5>
+            <h3 class=" Popular-restaurant-title "><a href="<%= restaurant_path(restaurant) %>"><%= restaurant.name %></a>
+            </h3>
+
+        </div>
+
+        <div class=" Popular-restaurant-description ">
+            <p><%= restaurant.description %>
+            </p>
+        </div>
+
+        <div class=" Popular-restaurant-rating-scoreVar ">
+            <div class="Popular-restaurant-rating-wrapper">
+            <div class="Popular-restaurant-rating" style="background-image: url(<%= asset_path('ratingbackground.svg') %>) ">
+               <img class="Popular-rating-score" src="<%= asset_path('ratingscore.svg') %>" width="<%= (restaurant.ratings * 100) / 5 %>%"   alt=" ">
+                </div>
+
+
+
+                <div class=" Popular-rateScorVar "><%= restaurant.ratings %></div>
+
+
+
+
+            </div>
+            <div class=" Popular-restaurant-OpenNow ">
+                <p>Open now</p>
+                <img src="<%= asset_path('Open-now-Icon.svg') %>" alt=" ">
+            </div>
+        </div>
+
+
+
+        <div class=" Popular-restaurant-tel-cuisine-openNow ">
+
+
+
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <%= link_to restaurant_path(restaurant), class: "" do %>
+
+
+
 
 
       <% end %>
-      </div>
+
     </div>
 
 
