@@ -6,4 +6,10 @@ class RestaurantsController < ApplicationController
     @restaurant = Restaurant.find(params[:id])
     @bookings = @restaurant.bookings
   end
+
+  def vegetarian!
+    @vegetarian = Restaurant.vegetarian
+    
+
+  end
 end
