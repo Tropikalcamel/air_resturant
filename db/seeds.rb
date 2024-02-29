@@ -68,6 +68,9 @@ require 'open-uri'
 require 'faker'
 Booking.destroy_all
 Restaurant.destroy_all
+User.destroy_all
+
+user = User.create!(email: "jhon@smith.example", password: "1234567")
 # Load the JSON data from the file or URL
 data = JSON.parse(File.read('db/restaurant.json'))
 
@@ -99,7 +102,7 @@ data['results'].each do |result|
   )
 
   # Find or create a user record (assuming you have a User model)
-  user = User.find_or_create_by(email: "lonnie@larkin.example")
+
   restaurant.user = user
 
   # Save the restaurant record
