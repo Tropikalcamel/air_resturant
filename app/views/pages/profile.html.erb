@@ -16,6 +16,7 @@
           Date: <%= booking.booking_date %>
           Time: <%= booking.booking_time %>
            <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-danger" %>
+          <%= button_to "update", booking_path(booking) , class:"btn btn-primary" %>
           </div>
       </div>
     <% end %>

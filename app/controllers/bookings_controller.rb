@@ -12,7 +12,7 @@ def create
   @booking.user = current_user
   @booking.restaurant = @restaurant
     if @booking.save
-    redirect_to root_path
+    redirect_to profile_path
     # needs to go confiramtion page
   else
     render "bookings/new", status: :unprocessable_entity

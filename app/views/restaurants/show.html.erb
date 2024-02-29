@@ -8,8 +8,18 @@
 <div class="rightCol">
  <div class="card-body">
     <h3 class="card-title"><strong><%= @restaurant.name %></strong></h3>
-    <p class="card-text">Phone number: <strong><%= @restaurant.phone_number  %></strong></p>
-    <p class="card-text">Vegetarian: <strong><%= @restaurant.vegetarian %></strong></p>
+    <h2 class="card-title"><strong><%= @restaurant.address %></strong></h2>
+    <h2 class="card-title"><strong><%= @restaurant.cuisine %></strong></h2>
+     <p class="card-text">Phone number: <strong><%= @restaurant.phone_number  %></strong></p>
+    <p class="card-text">
+    <strong>
+    <% if @restaurant.vegetarian? %>
+      <%= image_tag 'vegetarian.png', alt: 'Vegetarian' %>
+    <% else %>
+      <%= image_tag 'non_vegetarian.png', alt: 'Non-Vegetarian' %>
+    <% end %>
+  </strong>
+    </p>
     <p class="card-text">Description: <strong><%= @restaurant.description %></strong></p>
   </div>
 </div>
