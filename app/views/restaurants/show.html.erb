@@ -60,11 +60,12 @@
       <div class="restaurant-Cuisine-DietaryRestriction-Delivery">
           <div class="restaurant-Cuisine CuisineContainer">
               <div class="CuisineImg">
+
+
                 <img src="<%= asset_path("#{@restaurant.category}.svg") %>" alt="">
               </div>
               <div class="CuisineTitle">
                   <p><%= @restaurant.category %></p>
-
               </div>
           </div>
           <div class="categoryDivider"></div>
@@ -129,25 +130,25 @@
 
 
 
- <div class="card-body">
-    <h3 class="card-title"><strong><%= @restaurant.name %></strong></h3>
-    <h2 class="card-title"><strong><%= @restaurant.address %></strong></h2>
-    <p class="card-text">Phone number: <strong><%= @restaurant.phone_number  %></strong></p>
-    <p class="card-text">
-    <strong>
-    <% if @restaurant.vegetarian? %>
-      <%= image_tag 'vegetarian.png', alt: 'Vegetarian' %>
-    <% else %>
-      <%= image_tag 'non_vegetarian.png', alt: 'Non-Vegetarian' %>
-    <% end %>
-  </strong>
-    </p>
-    <p class="card-text">Description: <strong><%= @restaurant.description %></strong></p>
-  </div>
+
 </div>
+
 <div class="booking">
 
-<form action=""></form>
+<%= simple_form_for [@restaurant , @booking] do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :booking_date, input_html: { class: 'inputstyle' }%>
+    <%= f.input :booking_time, input_html: { class: 'inputstyle' }%>
+    <%= f.input :party_size, input_html: { class: 'inputstyle' }%>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit "Add booking", class: 'button-5'  %>
+        </div>
+<% end %>
 
 </div>
 
@@ -157,5 +158,3 @@
 
 
 </div>
-
-<%= link_to "booking", new_restaurant_booking_path(@restaurant), class: "btn btn-primary" %>

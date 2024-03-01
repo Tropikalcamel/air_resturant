@@ -2,23 +2,17 @@
 - create profile method in pages controller
 - create view for profile.html.erb inside pages views folder
 - current_user.bookings -->
-<div class="container">
-    <h1><%= @user.email %></h1>
-  </div>
-</div>
 
 <%# booking Card %>
 
-
-
-
-
 <div class="container">
-  <div class="row mt-5">
+
+
+
     <% @user.bookings.each do |booking| %>
 
 
-
+ <div class="bookingdiv">
 
 <div class="Popular-restaurant-info">
   <div class="Popular-restaurant-img">
@@ -72,31 +66,45 @@
 
 
 
+<%# old card %>
+
+      <div class="">
+
+
+      <div class="bookinginfo">
+      <div id="bookingwild">
+        <h5>Your booking information</h5>
+        <h4><%= booking.restaurant.name %></h4>
+      <div class="inforestaurantbooking">
+
+        <div class="restaurant-Address">
+            <img class="Img-Icon" src="/assets/adressIcon-9b5480c829a84d0145f4b452f421c50c081a6941bf1428316a887a06ceb36c21.svg" alt=" ">
+            <div class="textInfo"><%= booking.restaurant.address %></div>
+        </div>
+
+        <div class=" restaurant-tel ">
+            <img class="Img-Icon" src="/assets/phoneIcon-603110e6c78f6977d858d4486cb2f988b91f88ecb7cf190127f1729b472edfb2.svg" alt=" ">
+
+            <div class="textInfo"><%= booking.restaurant.phone_number %></div>
+        </div>
+
+        <div class="restaurant-OpningTime">
+            <img class="Img-Icon" src="/assets/Open-now-Icon-11edcfd53de93dd8ff2587dc749fd7f59a90b43246d09e25017951d4fcdd3b74.svg" alt=" ">
+            <div class="textInfo"><%= booking.booking_date %></div>
+            <div class="textInfo"><%= booking.booking_time %></div>
+
+        </div>
+      </div>
+
+      <div class="bookingeditBtn">
+            <%= button_to "Delete", booking_path(booking), method: :delete, class: 'button-delete' %>
+            <%= button_to "Update", edit_booking_path(booking), method: :get, class: 'button-edit' %>
+      </div>
+
+
+  </div></div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class="col-4">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('')">
-          At:  <%= booking.restaurant.name %>
-          Date: <%= booking.booking_date %>
-          Time: <%= booking.booking_time %>
-           <%= button_to "Delete", booking_path(booking), method: :delete, class:"btn btn-danger" %>
-            <%= button_to "Update", edit_booking_path(booking), method: :get, class: "btn btn-primary" %>
-            <%= link_to "Update", edit_booking_path(booking), class: "btn btn-primary" %>
-          </div>
       </div>
     <% end %>
