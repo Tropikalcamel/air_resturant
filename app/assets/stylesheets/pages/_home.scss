@@ -9,6 +9,8 @@
 
 .flex-wrap{
       display: flex;
+          margin-top: 46px;
+          margin-bottom: 100px;
 }
 .card-r{
 border-radius: 14px;
@@ -124,6 +126,13 @@ Not supports in Firefox and IE */
 
 #listOfRestautants {
   min-width: 759px;
+  /* height: 900px; */
+  padding-left: 33px;
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+#bookingwild {
+  // min-width: 759px;
   /* height: 900px; */
   padding-left: 33px;
   scroll-behavior: smooth;
@@ -282,15 +291,14 @@ Not supports in Firefox and IE */
 }
 
 .restaurant-description p {
-  width: 412px;
-  height: 32px;
-  /* left: 279px; */
-  color: #bdbdbd;
-  /* top: 560px; */
-  font-style: normal;
-  font-weight: normal;
-  margin: 0 0 0px 0;
-  font-size: 14px;
+    width: 192px;
+      color: #bdbdbd;
+      font-style: normal;
+      font-weight: normal;
+      margin: 0 0 0px 0;
+      overflow: hidden;
+      max-height: 62px;
+      font-size: 13px;
 }
 
 .restaurant-description {
@@ -319,20 +327,20 @@ Not supports in Firefox and IE */
 }
 
 .restaurant-category-tag {
-  padding: 8px;
-  width: 66px;
-  height: 15px;
-  background: #dbdbdb;
-  border-radius: 12px;
-  display: flex;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  line-height: 12px;
-  color: #ffffff;
+  padding: 14px;
+    width: 75px;
+    height: 15px;
+    background: #dbdbdb;
+    border-radius: 12px;
+    display: flex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    line-height: 12px;
+    color: #ffffff;
 }
 
 .restaurant-tel-Icon {}
@@ -381,7 +389,7 @@ Not supports in Firefox and IE */
 
 .Popular-restaurant-info {
 width: 225.09px;
-  height: 339px;
+  height: 375px;
   top: 266px;
   background: #f8f9fab5;
   border: 0.5px solid #efefef;
@@ -431,9 +439,10 @@ width: 225.09px;
 }
 
 .Popular-restaurant-title {
-  margin: 11px 0px 15px 0;
-  width: 191px;
-  line-height: 10px;
+      margin: 11px 0px 15px 0;
+        width: 191px;
+        line-height: 10px;
+        height: 23px;
 }
 
 .Popular-restaurant-title a {
@@ -499,7 +508,7 @@ font-style: normal;
 }
 
 .Popular-restaurant-description {
-  margin-bottom: 4px;
+  margin-bottom: 14px;
 }
 
 .Popular-restaurant-tel-cuisine-openNow {
@@ -872,4 +881,28 @@ font-style: normal;
   background-color: #0000001a;
   height: 50px;
   width: 1px;
+}
+
+
+
+
+// profile
+.bookingdiv{
+      background-color: #ececec;
+        width: 55%;
+        display: flex;
+        border: 1px solid #00000012;
+        padding: 7px 7px;
+        border-radius: 25px;
+}
+.bookingeditBtn{
+  display: flex;
+  margin-top: 107px;
+}
+#listOfRestautants h4{
+
+  margin-bottom: 15px;
+}
+.inforestaurantbooking{
+margin-top: 48px;
 }

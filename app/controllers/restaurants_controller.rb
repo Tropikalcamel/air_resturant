@@ -4,12 +4,12 @@ class RestaurantsController < ApplicationController
   end
   def show
     @restaurant = Restaurant.find(params[:id])
-    @bookings = @restaurant.bookings
+    @booking = Booking.new
   end
 
   def vegetarian!
     @vegetarian = Restaurant.vegetarian
-    
+
 
   end
 end
