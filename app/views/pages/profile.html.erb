@@ -5,7 +5,7 @@
 
 <%# booking Card %>
 
-<div class="container">
+<div class="">
 
 
 
@@ -34,7 +34,7 @@
         <div class=" Popular-restaurant-rating-scoreVar ">
             <div class="Popular-restaurant-rating-wrapper">
             <div class="Popular-restaurant-rating" style="background-image: url(<%= asset_path('ratingbackground.svg') %>) ">
-               <img class="Popular-rating-score" src="#"   alt=" ">
+               <img class="Popular-rating-score" src="<%= asset_path('ratingscore.svg') %>" width="<%= (booking.restaurant.ratings * 100) / 5 %>%"    alt=" ">
             </div>
 
 
@@ -64,18 +64,13 @@
 </div>
 
 
-
-
-<%# old card %>
-
       <div class="">
-
 
       <div class="bookinginfo">
       <div id="bookingwild">
         <h5>Your booking information</h5>
         <h4><%= booking.restaurant.name %></h4>
-      <div class="inforestaurantbooking">
+         <div class="inforestaurantbooking">
 
         <div class="restaurant-Address">
             <img class="Img-Icon" src="/assets/adressIcon-9b5480c829a84d0145f4b452f421c50c081a6941bf1428316a887a06ceb36c21.svg" alt=" ">
@@ -102,9 +97,10 @@
       </div>
 
 
-  </div></div>
-
+  </div>
+  </div>
+   <% end %>
+  </div>
 
 
       </div>
-    <% end %>
